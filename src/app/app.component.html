@@ -3,5 +3,7 @@
     <a routerLink="/dashboard">Dashboard</a>
     <a routerLink='/heroes'>Heroes</a>
 </nav>
+<p>Date: {{today | date}}</p>
+<p>Time: {{today | date:'shortTime'}}</p>
 <router-outlet></router-outlet>
 <app-messages></app-messages>
