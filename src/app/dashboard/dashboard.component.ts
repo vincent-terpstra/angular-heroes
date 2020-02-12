@@ -9,7 +9,7 @@ import { HeroService } from '../hero.service';
 })
 export class DashboardComponent implements OnInit {
   heroes: Hero[] = [];
-
+  selected: Hero;
   constructor(private heroService: HeroService) { }
 
   ngOnInit() {
@@ -18,6 +18,13 @@ export class DashboardComponent implements OnInit {
 
   getHeroes(): void {
     this.heroService.getHeroes()
-      .subscribe(heroes => this.heroes = heroes.slice(0, 4));
+      .subscribe(heroes => {
+        this.heroes = heroes.slice(0, 4)
+        this.selected = heroes[0];
+      });
+  }
+
+  onSelect(hero:Hero): void {
+    this.selected = hero;
   }
 }

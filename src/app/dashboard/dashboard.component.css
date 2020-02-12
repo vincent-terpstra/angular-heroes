@@ -18,6 +18,8 @@
   h3 {
     text-align: center;
     margin-bottom: 0;
+    float:centre;
+    clear:both;
   }
   h4 {
     position: relative;

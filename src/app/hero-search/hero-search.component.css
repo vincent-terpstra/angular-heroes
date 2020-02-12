@@ -9,12 +9,11 @@
 .search-result {
   position: absolute;
   right: 0;
+  z-index: 1;
 }
 
 .search-result li {
-    border-bottom: 1px solid gray;
-    border-left: 1px solid gray;
-    border-right: 1px solid gray;
+    border: 1px solid gray;
     width: 195px;
     height: 16px;
     padding: 5px;
@@ -43,7 +42,6 @@
     width: 200px;
     height: 20px;
   }
-  
   
   ul.search-result {
     margin-top: 0;
