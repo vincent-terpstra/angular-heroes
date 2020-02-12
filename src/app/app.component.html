@@ -1,7 +1,7 @@
-<h1>{{title}}</h1>
+<h2>{{title | uppercase}}</h2>
 <nav>
-    <a routerLink="/dashboard">Dashboard</a>
-    <a routerLink='/heroes'>Heroes</a>
+    <a routerLink="/dashboard"><div class="dash"><h4>Dashboard</h4></div></a>
+    <a routerLink='/heroes'><div class="dash"><h4>Heroes</h4></div></a>
 </nav>
 <p>Date: {{today | date}}</p>
 <p>Time: {{today | date:'shortTime'}}</p>

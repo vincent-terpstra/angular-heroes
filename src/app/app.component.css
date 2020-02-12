@@ -8,21 +8,59 @@ h2 {
   margin-top: 0;
   padding-top: 0;
 }
-nav a {
-  padding: 5px 10px;
-  text-decoration: none;
-  margin-top: 10px;
-  display: inline-block;
-  background-color: #eee;
-  border-radius: 4px;
+
+
+[class*='col-'] {
+  float: left;
+  padding-right: 20px;
+  padding-bottom: 20px;
 }
-nav a:visited, a:link {
-  color: #334953;
+[class*='col-']:last-of-type {
+  padding-right: 0;
 }
-nav a:hover {
-  color: #039be5;
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+h4 {
+  position: relative;
+}
+.grid {
+  margin: 0;
+}
+.dash {
+  width: 25%;
+  padding: 5px;
+  text-align: center;
+  color: #eee;
+  max-height: 120px;
+  min-width: 120px;
+  background-color: #3f525c;
+  border-radius: 10px;
+}
+.dash:hover {
   background-color: #cfd8dc;
+  cursor: pointer;
+  color: #607d8b;
 }
-nav a.active {
-  color: #039be5;
+.grid-pad {
+  padding: 10px 0;
+}
+.grid-pad > [class*='col-']:last-of-type {
+  padding-right: 20px;
+}
+@media (max-width: 600px) {
+  .module {
+    font-size: 10px;
+    max-height: 75px; }
+}
+@media (max-width: 1024px) {
+  .grid {
+    margin: 0;
+  }
+  .module {
+    min-width: 60px;
+  }
 }
