@@ -1,5 +1,5 @@
 /* DashboardComponent's private CSS styles */
-[class*='col-'] {
+  [class*='col-'] {
     float: left;
     padding-right: 20px;
     padding-bottom: 20px;
@@ -28,6 +28,9 @@
   .col-1-4 {
     width: 25%;
   }
+  .grid-pad {
+    padding: 5px 0;
+  }
   .module {
     padding: 5px;
     text-align: center;
@@ -42,9 +45,7 @@
     cursor: pointer;
     color: #607d8b;
   }
-  .grid-pad {
-    padding: 5px 0;
-  }
+  
   @media (max-width: 600px) {
     .module {
       font-size: 10px;

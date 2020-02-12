@@ -13,6 +13,7 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { MessagesComponent }   from './messages/messages.component';
 import { DashboardComponent }  from './dashboard/dashboard.component';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
+import { DateComponent } from './date/date.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
     MessagesComponent,
     DashboardComponent,
     HeroSearchComponent,
+    DateComponent,
   ],
   imports: [
     BrowserModule,

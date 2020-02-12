@@ -1,4 +1,16 @@
 /* HeroSearch private styles */
+
+#search-component {
+  position:relative;
+  float:left;
+  clear:both;
+}
+
+.search-result {
+  position: absolute;
+  right: 0;
+}
+
 .search-result li {
     border-bottom: 1px solid gray;
     border-left: 1px solid gray;

@@ -8,6 +8,9 @@ h2 {
   margin-top: 0;
   padding-top: 0;
 }
+h4 {
+  position: relative;
+}
 
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
@@ -19,22 +22,23 @@ a {
   text-decoration: none;
 }
 
-h4 {
-  position: relative;
+.grid {
+  margin: 0;
 }
-
+.col-1-2 {
+  width: 50%;
+}
+.grid-pad {
+  padding: 5px 0;
+}
 .dash {
-  position:relative;
-  float:left;
-  width: 25%;
+  padding: 5px;
   text-align: center;
   color: #eee;
   max-height: 120px;
   min-width: 120px;
   background-color: #3f525c;
   border-radius: 10px;
-  margin-left: 0px;
-  margin-right: 10px;
 }
 
 .dash:hover {
@@ -46,14 +50,8 @@ h4 {
   display: inline-block;
 
 }
-.grid-pad {
-  padding: 10px 0;
-}
-.grid-pad > [class*='col-']:last-of-type {
-  padding-right: 20px;
-}
 @media (max-width: 600px) {
-  .module {
+  .dash {
     font-size: 10px;
     max-height: 75px; }
 }
@@ -61,7 +59,17 @@ h4 {
   .grid {
     margin: 0;
   }
-  .module {
+  .dash {
     min-width: 60px;
   }
 }
+
+[class*='col-'] {
+  float: left;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+[class*='col-']:last-of-type {
+  padding-right: 0;
+}
+
