@@ -16,6 +16,7 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { DateComponent } from './date.component';
 import { EvilComponent } from './evil.component';
 import { DeleteButtonComponent } from './delete-button/delete-button.component';
+import { ResizeComponent } from './resize/resize.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { DeleteButtonComponent } from './delete-button/delete-button.component';
     HeroSearchComponent,
     DateComponent,
     EvilComponent,
-    DeleteButtonComponent
+    DeleteButtonComponent,
+    ResizeComponent
   ],
   imports: [
     BrowserModule,

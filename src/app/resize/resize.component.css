@@ -1,0 +1,12 @@
+button {
+    margin-right: 2px;
+}
+
+.inc {
+    background-color: #405061;
+    border-radius: 0 4px 4px 0;
+}
+
+.dec {
+    border-radius: 4px 0 0 4px;
+}

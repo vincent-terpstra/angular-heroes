@@ -41,11 +41,6 @@ a {
   border-radius: 10px;
 }
 
-.dash:hover {
-  background-color: #cfd8dc;
-  cursor: pointer;
-  color: #607d8b;
-}
 .date{
   display: inline-block;
 

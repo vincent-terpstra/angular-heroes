@@ -43,3 +43,6 @@
   border-radius: 4px 0 0 4px;
 }
 
+#add:hover {
+  background-color: rgb(175, 150, 9);
+}

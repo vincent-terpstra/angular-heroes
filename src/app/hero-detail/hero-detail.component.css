@@ -4,29 +4,14 @@
     font-weight: bold;
   }
 
-  button {
-    margin-top: 20px;
-    font-family: Arial;
-    background-color: #eee;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 4px;
-    cursor: pointer;
-    cursor: hand;
-  }
-  button:hover {
-    background-color: #cfd8dc;
-  }
-  button:disabled {
-    background-color: #eee;
-    color: #ccc;
-    cursor: auto;
-  }
-
   .badge {
     width: 2.5em;
   }
 
+  button {
+    margin-left: 2px;
+  }
+  
   div {
     margin:5px;
   }

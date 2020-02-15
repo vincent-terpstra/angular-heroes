@@ -5,7 +5,8 @@
         <input #heroName 
             (keyup.enter)="add(heroName.value); heroName.value=''"
             (blur)="add(heroName.value); heroName.value=''"/>
-    <button (click)="add(heroName.value); heroName.value=''">
+    <button (click)="add(heroName.value); heroName.value=''" 
+        id= "add">
         +
     </button>
     </li>

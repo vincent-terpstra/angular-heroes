@@ -10,10 +10,12 @@ import { HeroService } from '../hero.service';
 export class DashboardComponent implements OnInit {
   heroes: Hero[] = [];
   selected: Hero;
+  fontSizePx: number;
   constructor(private heroService: HeroService) { }
 
   ngOnInit() {
     this.getHeroes();
+    this.fontSizePx = 12;
   }
 
   getHeroes(): void {
