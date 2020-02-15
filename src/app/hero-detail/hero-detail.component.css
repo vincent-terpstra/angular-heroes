@@ -30,3 +30,8 @@
   div {
     margin:5px;
   }
+
+  div {
+    float: left;
+    clear: both;
+  }

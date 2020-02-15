@@ -15,6 +15,7 @@ import { DashboardComponent }  from './dashboard/dashboard.component';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { DateComponent } from './date.component';
 import { EvilComponent } from './evil.component';
+import { DeleteButtonComponent } from './delete-button/delete-button.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { EvilComponent } from './evil.component';
     DashboardComponent,
     HeroSearchComponent,
     DateComponent,
-    EvilComponent
+    EvilComponent,
+    DeleteButtonComponent
   ],
   imports: [
     BrowserModule,

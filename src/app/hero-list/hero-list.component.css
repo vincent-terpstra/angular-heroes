@@ -43,27 +43,3 @@
   border-radius: 4px 0 0 4px;
 }
 
-button {
-  border: none;
-  border-radius: 4px;
-  cursor: hand;
-  font-family: Arial;
-  background-color: gray;
-  color: white;
-  position:relative;
-  padding: 6px 9.5px 6px 9.5px;
-  top: -1px;
-}
-
-button.delete {
-  padding: 5px 10px 7px 10px;
-  top:-2px;
-}
-
-button:hover {
-  background-color: rgb(175, 150, 9);
-}
-
-button.delete:hover {
-  background-color: rgb(146, 18, 18);
-}
