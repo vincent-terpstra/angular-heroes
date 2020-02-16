@@ -17,6 +17,8 @@ import { DateComponent } from './date.component';
 import { EvilComponent } from './evil.component';
 import { DeleteButtonComponent } from './delete-button/delete-button.component';
 import { ResizeComponent } from './resize/resize.component';
+import { SvgComponent } from './svg/svg.component';
+import { KeyEventComponent } from './key-event/key-event.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { ResizeComponent } from './resize/resize.component';
     DateComponent,
     EvilComponent,
     DeleteButtonComponent,
-    ResizeComponent
+    ResizeComponent,
+    SvgComponent,
+    KeyEventComponent
   ],
   imports: [
     BrowserModule,

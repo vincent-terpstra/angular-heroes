@@ -3,9 +3,11 @@ import { Hero } from '../hero';
 
 @Component({
   selector: 'app-delete-button',
-  templateUrl: './delete-button.component.html',
-  styleUrls: ['./delete-button.component.css']
+  template: `<button class="delete" (click)="delete()">{{label}}</button>`,
+  styles:[`.delete { padding: 5px 10px 7px 10px;}
+           .delete:hover{background-color: rgb(146, 18, 18); color: white;}`]
 })
+
 export class DeleteButtonComponent implements OnInit {
   @Input() hero: Hero;
   @Input() label: string;

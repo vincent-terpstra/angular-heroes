@@ -16,9 +16,9 @@
 }
 
   .dash:hover, button:hover {
-    background-color: #cfd8dc !important;
+    background-color: #cfd8dc;
     cursor: pointer;
-    color: #607d8b !important;
+    color: #607d8b;
   }
   input {
     width: 195px;
@@ -37,12 +37,4 @@
     padding: 6px 9.5px 6px 9.5px;
     top: -1px;
   }
-  
-  button.delete {
-    padding: 5px 10px 7px 10px;
-    top:-2px;
-  }
-  
-  button.delete:hover {
-    background-color: rgb(146, 18, 18);
-  }
+
