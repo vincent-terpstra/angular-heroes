@@ -2,12 +2,14 @@
     <h3>
       <span class="badge"><label for="search-box">Hero Search </label></span>
   
-    <input #searchBox id="search-box" (input)="search(searchBox.value)" autocomplete="off" (keyup)="onKey($event)"/>
+    <input #searchBox id="search-box" (input)="search(searchBox.value)" autocomplete="off" 
+      (keydown.ArrowDown)="onKey(+1)" (keydown.ArrowUp)="onKey(-1)" (keydown.enter)="redirect()"
+    
+    />
     <ul class="search-result">
-      <li *ngFor="let hero of heroes$ | async" >
-        <a routerLink="/detail/{{hero.id}}">{{hero.name}}</a>
+      <li *ngFor="let hero of heroes$ | async; let i = index" >
+        <a routerLink="/detail/{{hero.id}}" [class]="getClass(i, hero.id)">{{hero.name}}</a>
       </li>
     </ul>
-    <p> Index:{{level}} </p>
   </h3>
   </div>

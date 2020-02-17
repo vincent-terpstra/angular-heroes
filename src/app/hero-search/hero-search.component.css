@@ -11,19 +11,17 @@
   right: 0;
   z-index: 1;
 }
-
 .search-result li {
+  list-style-type: none;
+}
+
+.search-result li a{
     border: 1px solid gray;
     width: 195px;
     height: 16px;
     padding: 5px;
     background-color: white;
     cursor: pointer;
-    list-style-type: none;
-  }
-  
-  .search-result li:hover {
-    background-color: #607D8B;
   }
   
   .search-result li a {
@@ -32,12 +30,12 @@
     text-decoration: none;
   }
   
-  .search-result li a:hover {
-    color: white;
+  
+  .search-result li a:hover, .highlight {
+    background-color: #607D8B !important;
+    color: white !important;
   }
-  .search-result li a:active {
-    color: white;
-  }
+
   #search-box {
     width: 200px;
     height: 20px;
