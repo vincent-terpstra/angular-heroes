@@ -3,7 +3,7 @@
       <span class="badge"><label for="search-box">Hero Search </label></span>
   
     <input #searchBox id="search-box" (input)="search(searchBox.value)" autocomplete="off" 
-      (keydown.ArrowDown)="onKey(+1)" (keydown.ArrowUp)="onKey(-1)" (keydown.enter)="redirect()"
+      (keydown.ArrowDown)="onKey(+1)" (keydown.ArrowUp)="onKey(-1)" (keydown.enter)="redirect()" ()
     
     />
     <ul class="search-result">
