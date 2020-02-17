@@ -7,7 +7,7 @@ import {
 
 import {Hero} from '../hero';
 import {HeroService} from '../hero.service';
-import { Router } from '@angular/router';
+import { Router, Scroll } from '@angular/router';
 
 @Component({
   selector: 'app-hero-search',
@@ -19,6 +19,7 @@ export class HeroSearchComponent implements OnInit {
     level: number = 0;
     size: number = 0;
     heroId: number = 0;
+    show = true;
   
   private searchTerms = new Subject<string>();
 
@@ -59,8 +60,22 @@ export class HeroSearchComponent implements OnInit {
     }
   }
 
+  mouseOver(id: number, heroId: number){
+    this.heroId = heroId;
+    this.level = id;
+  }
+
   redirect(){
     if(this.heroId != 0)
       this.router.navigate(['/detail/' + this.heroId]);
+  }
+
+  toggleShow(value: boolean){
+    setTimeout(()=> this.show = value, 300);
+  }
+
+  scroll(event: WheelEvent){
+    event.preventDefault();
+    this.onKey(event.deltaY > 0 ? 1 : -1);
   }
 }

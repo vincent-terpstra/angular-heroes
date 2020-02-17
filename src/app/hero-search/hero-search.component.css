@@ -31,7 +31,7 @@
   }
   
   
-  .search-result li a:hover, .highlight {
+  .highlight {
     background-color: #607D8B !important;
     color: white !important;
   }

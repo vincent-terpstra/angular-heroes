@@ -1,14 +1,16 @@
-<div id="search-component">
-    <h3>
+<div id="search-component" >
+    <h3 >
       <span class="badge"><label for="search-box">Hero Search </label></span>
-  
     <input #searchBox id="search-box" (input)="search(searchBox.value)" autocomplete="off" 
-      (keydown.ArrowDown)="onKey(+1)" (keydown.ArrowUp)="onKey(-1)" (keydown.enter)="redirect()" ()
-    
+      (keydown.ArrowDown)="onKey(+1)" (keydown.ArrowUp)="onKey(-1)" (keydown.enter)="redirect()"
+      (wheel)="scroll($event)"
+      (focus)="toggleShow(true)" (blur)="toggleShow(false)"
     />
-    <ul class="search-result">
-      <li *ngFor="let hero of heroes$ | async; let i = index" >
-        <a routerLink="/detail/{{hero.id}}" [class]="getClass(i, hero.id)">{{hero.name}}</a>
+    <ul [hidden]="!show" class="search-result" (wheel)="scroll($event)">
+      <li *ngFor="let hero of heroes$ | async; let i = index" (focus)="toggleShow(true)">
+        <a routerLink="/detail/{{hero.id}}" [class]="getClass(i, hero.id)"
+          (mouseover)="mouseOver(i, hero.id)"
+        >{{hero.name}}</a>
       </li>
     </ul>
   </h3>
