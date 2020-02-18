@@ -19,6 +19,7 @@ import { DeleteButtonComponent } from './delete-button/delete-button.component';
 import { ResizeComponent } from './resize/resize.component';
 import { SvgComponent } from './svg/svg.component';
 import { KeyEventComponent } from './key-event/key-event.component';
+import { SpyDirective } from './spy.directive';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { KeyEventComponent } from './key-event/key-event.component';
     DeleteButtonComponent,
     ResizeComponent,
     SvgComponent,
-    KeyEventComponent
+    KeyEventComponent,
+    SpyDirective
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, SimpleChanges, OnChanges } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
@@ -13,7 +13,7 @@ import { Hero } from '../hero';
 
 
 
-export class HeroDetailComponent implements OnInit {
+export class HeroDetailComponent implements OnInit, OnChanges {
   @Input() hero : Hero;
 
   constructor(
@@ -39,5 +39,39 @@ export class HeroDetailComponent implements OnInit {
   save(): void {
     this.heroService.updateHero(this.hero)
     .subscribe(()=> this.goBack());
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    for (let propName in changes) {
+      let chng = changes[propName];
+      let cur  = JSON.stringify(chng.currentValue);
+      let prev = JSON.stringify(chng.previousValue);
+      console.log(`${propName}: currentValue = ${cur}, previousValue = ${prev}`);
+    }
+  }
+  oldHeroName:string;
+  changeDetected: boolean;
+  noChangeCount: number;
+  ngDoCheck() {
+
+    if (this.hero.name !== this.oldHeroName) {
+      this.changeDetected = true;
+      console.log(`DoCheck: Hero name changed to "${this.hero.name}" from "${this.oldHeroName}"`);
+      this.oldHeroName = this.hero.name;
+    }
+  
+    if (this.changeDetected) {
+        this.noChangeCount = 0;
+    } else {
+        // log that hook was called when there was no relevant change.
+        let count = this.noChangeCount += 1;
+        let noChangeMsg = `DoCheck called ${count}x when no change to hero or power`;
+        if (count === 1) {
+          // add new "no change" message
+          console.log(noChangeMsg);
+        }
+    }
+  
+    this.changeDetected = false;
   }
 }
