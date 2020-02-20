@@ -53,7 +53,7 @@ export class HeroDetailComponent implements OnInit, OnChanges {
   changeDetected: boolean;
   noChangeCount: number;
   ngDoCheck() {
-
+    if(this.hero === undefined) return;
     if (this.hero.name !== this.oldHeroName) {
       this.changeDetected = true;
       console.log(`DoCheck: Hero name changed to "${this.hero.name}" from "${this.oldHeroName}"`);
