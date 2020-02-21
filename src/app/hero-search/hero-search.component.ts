@@ -8,6 +8,7 @@ import {
 import {Hero} from '../hero';
 import {HeroService} from '../hero.service';
 import { Router, Scroll } from '@angular/router';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-hero-search',
@@ -20,6 +21,8 @@ export class HeroSearchComponent implements OnInit {
     size: number = 0;
     heroId: number = 0;
     show = true;
+
+    magnify = faSearch;
   
   private searchTerms = new Subject<string>();
 

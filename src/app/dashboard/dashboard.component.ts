@@ -3,12 +3,16 @@ import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
 import { HeroDetailComponent } from '../hero-detail/hero-detail.component';
 
+import { faFilm } from '@fortawesome/free-solid-svg-icons';
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: [ './dashboard.component.css' ]
 })
 export class DashboardComponent implements OnInit {
+  filmIcon = faFilm;
+
   heroes: Hero[] = [];
   selected: Hero;
   fontSizePx: number;

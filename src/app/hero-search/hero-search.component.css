@@ -8,9 +8,9 @@
 
 .search-result {
   position: absolute;
-  right: 0;
   z-index: 1;
 }
+
 .search-result li {
   list-style-type: none;
 }
@@ -22,14 +22,10 @@
     padding: 5px;
     background-color: white;
     cursor: pointer;
-  }
-  
-  .search-result li a {
     color: #888;
     display: block;
     text-decoration: none;
   }
-  
   
   .highlight {
     background-color: #607D8B !important;
@@ -44,4 +40,17 @@
   ul.search-result {
     margin-top: 0;
     padding-left: 0;
+  }
+
+  .badge, input {
+    display:inline-block;
+  }
+
+  label {
+    width: 90px;
+  }
+
+  .magnify {
+    border-radius: 0 4px 4px 0;
+    width: 15px;
   }

@@ -1,6 +1,7 @@
 <div id="search-component" >
     <h3 >
-      <span class="badge"><label for="search-box">Hero Search </label></span>
+    <label class="badge" for="search-box">Hero Search </label>
+    <div style="display:inline-block;">
     <input #searchBox id="search-box" (input)="search(searchBox.value)" autocomplete="off" 
       (keydown.ArrowDown)="onKey(+1)" (keydown.ArrowUp)="onKey(-1)" (keydown.enter)="redirect()"
       (wheel)="scroll($event)"
@@ -13,5 +14,9 @@
         >{{hero.name}}</a>
       </li>
     </ul>
+    </div>
+    <div class="badge magnify">
+      <fa-icon [icon]="magnify"></fa-icon>
+    </div>
   </h3>
   </div>

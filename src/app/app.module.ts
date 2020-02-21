@@ -9,6 +9,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent }     from './app.component';
 import { HeroesComponent }  from './hero-list/hero-list.component';
 import { FormsModule }      from '@angular/forms';
+import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
+
+//WARNING AVOID importing the WHOLE library (increases package size)
+//import { fas } from '@fortawesome/free-solid-svg-icons';
+
+//RATHER import seperate icons as needed
+import { faAngular } from '@fortawesome/free-brands-svg-icons';
+
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { MessagesComponent }   from './messages/messages.component';
 import { DashboardComponent }  from './dashboard/dashboard.component';
@@ -42,6 +50,7 @@ import { SpyDirective } from './spy.directive';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    FontAwesomeModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false}
     )
@@ -49,4 +58,11 @@ import { SpyDirective } from './spy.directive';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(library: FaIconLibrary){
+    //AVOID importing the whole package
+    //library.addIconPacks(fas);
+
+    library.addIcons(faAngular);
+  }
+}
