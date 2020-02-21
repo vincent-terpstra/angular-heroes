@@ -22,15 +22,6 @@ a {
   text-decoration: none;
 }
 
-.grid {
-  margin: 0;
-}
-.col-1-2 {
-  width: 50%;
-}
-.grid-pad {
-  padding: 5px 0;
-}
 .dash {
   padding: 5px;
   text-align: center;
@@ -43,28 +34,4 @@ a {
 
 .date{
   display: inline-block;
-
 }
-@media (max-width: 600px) {
-  .dash {
-    font-size: 10px;
-    max-height: 75px; }
-}
-@media (max-width: 1024px) {
-  .grid {
-    margin: 0;
-  }
-  .dash {
-    min-width: 60px;
-  }
-}
-
-[class*='col-'] {
-  float: left;
-  padding-right: 20px;
-  padding-bottom: 20px;
-}
-[class*='col-']:last-of-type {
-  padding-right: 0;
-}
-

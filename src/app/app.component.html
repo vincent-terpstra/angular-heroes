@@ -1,10 +1,9 @@
 <h2>{{title | uppercase}}</h2>
 
-<nav class="grid grid-pad">
-    <a class = "col-1-2" routerLink="/dashboard"><div class="dash"><h4>Dashboard</h4></div></a>
-    <a class = "col-1-2" routerLink='/heroes'><div class="dash"><h4>Heroes</h4></div></a>
+<nav class="grid">
+    <a class = "small-12 medium-6 cell hover" routerLink="/dashboard"><h4>Dashboard</h4></a>
+    <a class = "small-12 medium-6 cell hover" routerLink="/heroes"><h4>Heroes</h4></a>
 </nav>
 
-<br>
 <router-outlet></router-outlet>
 <app-messages></app-messages>

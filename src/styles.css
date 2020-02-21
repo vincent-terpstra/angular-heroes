@@ -1,25 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./size.css";
 
-.badge {
-    display: inline-block;
-    font-size: small;
-    padding: 0.8em 0.7em 0 0.7em;
-    line-height: 1em;
-    height:1.65em;
-    min-width: 16px;
-    text-align: center;
-    border-radius: 4px 0 0 4px;
+  .badge {
+      display: inline-block;
+      font-size: small;
+      padding: 0.8em 0.7em 0 0.7em;
+      line-height: 1em;
+      height:1.65em;
+      min-width: 16px;
+      text-align: center;
+      border-radius: 4px 0 0 4px;
   }
-.badge, button {
-  background-color:#405061;
-  color: white;
-}
 
-  .dash:hover, button:hover {
-    background-color: #cfd8dc;
-    cursor: pointer;
-    color: #607d8b;
+  .badge, button {
+    background-color:#405061;
+    color: white;
   }
+
   input {
     width: 195px;
     margin:0 1px 0 0;
@@ -38,3 +35,16 @@
     top: -1px;
   }
 
+  .cell {
+    background-color: #405061;
+    color: white;
+    border-radius: 5px;
+    margin:2px;
+    text-align:center;
+  }
+  
+  .hover:hover {
+    background-color: #cfd8dc;
+    cursor: pointer;
+    color: #607d8b;
+  }
