@@ -4,6 +4,8 @@ import { HeroService } from '../hero.service';
 import { HeroDetailComponent } from '../hero-detail/hero-detail.component';
 
 import { faFilm } from '@fortawesome/free-solid-svg-icons';
+import { AdItem } from '../dynamic-loader/ad-item';
+import { AdService }  from '../dynamic-loader/ad.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -12,15 +14,17 @@ import { faFilm } from '@fortawesome/free-solid-svg-icons';
 })
 export class DashboardComponent implements OnInit {
   filmIcon = faFilm;
+  ads: AdItem[];
 
   heroes: Hero[] = [];
   selected: Hero;
   fontSizePx: number;
-  constructor(private heroService: HeroService) { }
+  constructor(private heroService: HeroService, private adService: AdService) { }
 
   ngOnInit() {
     this.getHeroes();
     this.fontSizePx = 12;
+    this.ads = this.adService.getAds();
   }
 
   getHeroes(): void {

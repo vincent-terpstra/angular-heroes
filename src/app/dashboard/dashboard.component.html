@@ -11,8 +11,10 @@
 <div *ngIf="selected">
   <app-hero-detail [hero]="selected"></app-hero-detail>
 </div>
-
 <app-date></app-date>
+<div class="cell" style ="display:inline-block; height: 180px; width: 200px;">
+  <app-ad-banner [ads]="ads"></app-ad-banner>
+</div>
 <app-resize [(font)]="fontSizePx"></app-resize>
 <div [style.font-size.px]="fontSizePx">Output size:{{fontSizePx}}</div>
 <app-evil></app-evil>

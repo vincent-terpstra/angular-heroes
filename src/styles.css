@@ -12,10 +12,7 @@
       border-radius: 4px 0 0 4px;
   }
 
-  .badge, button {
-    background-color:#405061;
-    color: white;
-  }
+  
 
   input {
     width: 195px;
@@ -34,10 +31,13 @@
     padding: 6px 9.5px 6px 9.5px;
     top: -1px;
   }
-
-  .cell {
+  
+  .badge, .cell {
     background-color: #405061;
     color: white;
+  }
+
+  .cell {
     border-radius: 5px;
     margin:2px;
     text-align:center;
@@ -45,6 +45,6 @@
   
   .hover:hover {
     background-color: #cfd8dc;
-    cursor: pointer;
     color: #607d8b;
+    cursor: pointer;
   }

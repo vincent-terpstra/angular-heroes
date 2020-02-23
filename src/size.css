@@ -1,13 +1,13 @@
-@media (max-width: 1024px) {  
-    .medium-6 {
-        grid-column: span 2;
-    }
-    .medium-3{
-        grid-column: span 1;
-    }
+
+.medium-6 {
+    grid-column: span 2;
 }
+.medium-3 {
+    grid-column: span 1;
+}
+
 @media (max-width: 600px) {
-    .small-12{
+    .small-12 {
         grid-column: span 4;
     }
     .small-6 {
@@ -17,5 +17,5 @@
 
 .grid {
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: 25% auto 25% 25%;
 }

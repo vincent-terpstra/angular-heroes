@@ -29,6 +29,16 @@ import { SvgComponent } from './svg/svg.component';
 import { KeyEventComponent } from './key-event/key-event.component';
 import { SpyDirective } from './spy.directive';
 
+import { HeroJobAdComponent } from './dynamic-loader/hero-job-ad.component';
+import { HeroProfileComponent } from './dynamic-loader/hero-profile.component';
+
+import { AdDirective } from './dynamic-loader/ad.directive';
+import { AdService } from './dynamic-loader/ad.service';
+
+import { AdBannerComponent } from "./dynamic-loader/ad-banner.component";
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +53,11 @@ import { SpyDirective } from './spy.directive';
     ResizeComponent,
     SvgComponent,
     KeyEventComponent,
-    SpyDirective
+    SpyDirective,
+    AdDirective,
+    HeroJobAdComponent,
+    HeroProfileComponent,
+    AdBannerComponent
   ],
   imports: [
     BrowserModule,
@@ -55,9 +69,11 @@ import { SpyDirective } from './spy.directive';
       InMemoryDataService, { dataEncapsulation: false}
     )
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [AdService],
+  entryComponents: [HeroJobAdComponent, HeroProfileComponent],
+  bootstrap: [AppComponent],
 })
+
 export class AppModule {
   constructor(library: FaIconLibrary){
     //AVOID importing the whole package
