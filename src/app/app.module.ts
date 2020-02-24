@@ -37,6 +37,7 @@ import { AdService } from './dynamic-loader/ad.service';
 
 import { AdBannerComponent } from "./dynamic-loader/ad-banner.component";
 import { HighlightDirective } from './highlight.directive';
+import { ScrolltopComponent } from './scrolltop/scrolltop.component';
 
 
 
@@ -59,7 +60,8 @@ import { HighlightDirective } from './highlight.directive';
     HeroJobAdComponent,
     HeroProfileComponent,
     AdBannerComponent,
-    HighlightDirective
+    HighlightDirective,
+    ScrolltopComponent
   ],
   imports: [
     BrowserModule,

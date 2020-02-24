@@ -6,7 +6,7 @@
       (wheel)="scroll($event)"
       (focus)="toggleShow(true)" (blur)="toggleShow(false)"
     />
-    <ul [hidden]="false" class="search-result" (wheel)="scroll($event)">
+    <ul [hidden]="!show" class="search-result" (wheel)="scroll($event)">
       <li *ngFor="let hero of heroes$ | async; let i = index" (focus)="toggleShow(true)">
         <a routerLink="/detail/{{hero.id}}" [class]="getClass(i, hero.id)"
           (mouseover)="mouseOver(i, hero.id)"
