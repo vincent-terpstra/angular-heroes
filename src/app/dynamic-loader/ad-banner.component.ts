@@ -1,4 +1,4 @@
-import { OnInit, Component, OnDestroy, Input, ViewChild, ComponentFactoryResolver } from "@angular/core";
+import { OnInit, Component, OnDestroy, Input, ViewChild, ComponentFactoryResolver, HostListener } from "@angular/core";
 import { AdDirective } from './ad.directive';
 import { AdItem }       from './ad-item'
 import { AdComponent  } from './ad.component';
@@ -23,12 +23,23 @@ export class AdBannerComponent implements OnInit, OnDestroy {
 
     ngOnInit(): void {
         this.loadComponent();
-        this.getAds();
+        this.resume();
     }
 
     ngOnDestroy(): void {
-        clearInterval(this.interval)
+        this.pause();
     }
+
+    @HostListener('mouseenter')
+    onMouseEnter(){
+        this.pause();
+    }
+
+    @HostListener('mouseleave')
+    onMouseLeave(){
+        this.resume();
+    }
+
     loadComponent(){
         this.currentAdIndex = (this.currentAdIndex+ 1)% this.ads.length;
 
@@ -41,9 +52,12 @@ export class AdBannerComponent implements OnInit, OnDestroy {
         (<AdComponent>componentRef.instance).data = adItem.data;
     }
 
-    getAds(){
-        this.interval = setInterval(()=>{
-            this.loadComponent();
-        }, 3000);
+    pause(){
+        clearInterval(this.interval);
+    }
+
+    resume(){
+        this.pause();
+        this.interval = setInterval(()=>{ this.loadComponent();}, 3000);
     }
 }

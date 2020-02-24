@@ -42,8 +42,8 @@
     text-align:center;
   }
   
-  .hover:hover {
-    background-color: #cfd8dc;
-    color: #607d8b;
+  .hover:hover, button:hover {
+    background-color: #cfd8dc !important;
+    color: #607d8b !important;
     cursor: pointer;
   }

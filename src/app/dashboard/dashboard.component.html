@@ -12,17 +12,22 @@
   </div>
 </div>
 
-<div *ngIf="selected">
+<div class="grid">
+<div *ngIf="selected" class="medium-6 small-6">
   <app-hero-detail [hero]="selected"></app-hero-detail>
 </div>
-
-<app-date></app-date>
-<div class="cell" style ="display:inline-block; height: 180px; width: 200px;">
+<div class="medium-6 small-6">
+  <app-date></app-date>
+  <app-resize [(font)]="fontSizePx"></app-resize>
+  <div [style.font-size.px]="fontSizePx">Output size: {{fontSizePx}}px</div>
+  <p appHighlight="gold">Highlight Directive</p>
+</div>
+<div class="medium-12 small-12 cell" style="height:180px;">
   <app-ad-banner [ads]="ads"></app-ad-banner>
 </div>
+</div>
 <hr>
-<app-resize [(font)]="fontSizePx"></app-resize>
-<div [style.font-size.px]="fontSizePx">Output size:{{fontSizePx}}</div>
+
 <app-evil></app-evil>
 <hr>
 <app-svg></app-svg>

@@ -36,6 +36,7 @@ import { AdDirective } from './dynamic-loader/ad.directive';
 import { AdService } from './dynamic-loader/ad.service';
 
 import { AdBannerComponent } from "./dynamic-loader/ad-banner.component";
+import { HighlightDirective } from './highlight.directive';
 
 
 
@@ -57,7 +58,8 @@ import { AdBannerComponent } from "./dynamic-loader/ad-banner.component";
     AdDirective,
     HeroJobAdComponent,
     HeroProfileComponent,
-    AdBannerComponent
+    AdBannerComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
