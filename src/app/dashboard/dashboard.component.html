@@ -1,4 +1,8 @@
-<app-hero-search></app-hero-search>
+<div class= "grid">
+  <div class="small-12 medium-9">
+    <app-hero-search ></app-hero-search>
+  </div>
+</div>
 <h3><fa-icon [icon]="['fab', 'angular']" class="icon-4x"></fa-icon>Experiments sourced from: <a href="angular.io/tutorial">Angular Tutorial</a></h3>
 
 <h3>Top Heroes <fa-icon [icon]="filmIcon"></fa-icon></h3>
@@ -11,13 +15,17 @@
 <div *ngIf="selected">
   <app-hero-detail [hero]="selected"></app-hero-detail>
 </div>
+
 <app-date></app-date>
 <div class="cell" style ="display:inline-block; height: 180px; width: 200px;">
   <app-ad-banner [ads]="ads"></app-ad-banner>
 </div>
+<hr>
 <app-resize [(font)]="fontSizePx"></app-resize>
 <div [style.font-size.px]="fontSizePx">Output size:{{fontSizePx}}</div>
 <app-evil></app-evil>
+<hr>
 <app-svg></app-svg>
+<hr>
 <app-key-event></app-key-event>
 

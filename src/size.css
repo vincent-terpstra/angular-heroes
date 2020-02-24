@@ -1,4 +1,6 @@
-
+.medium-9 {
+    grid-column: span 3;
+}
 .medium-6 {
     grid-column: span 2;
 }
