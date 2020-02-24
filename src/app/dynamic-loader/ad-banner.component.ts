@@ -30,16 +30,6 @@ export class AdBannerComponent implements OnInit, OnDestroy {
         this.pause();
     }
 
-    @HostListener('mouseenter')
-    onMouseEnter(){
-        this.pause();
-    }
-
-    @HostListener('mouseleave')
-    onMouseLeave(){
-        this.resume();
-    }
-
     loadComponent(){
         this.currentAdIndex = (this.currentAdIndex+ 1)% this.ads.length;
 
@@ -52,10 +42,12 @@ export class AdBannerComponent implements OnInit, OnDestroy {
         (<AdComponent>componentRef.instance).data = adItem.data;
     }
 
+    @HostListener('mouseenter')
     pause(){
         clearInterval(this.interval);
     }
 
+    @HostListener('mouseleave')
     resume(){
         this.pause();
         this.interval = setInterval(()=>{ this.loadComponent();}, 3000);
