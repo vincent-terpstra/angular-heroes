@@ -39,7 +39,6 @@ import { AdBannerComponent } from "./dynamic-loader/ad-banner.component";
 import { HighlightDirective } from './highlight.directive';
 import { ScrolltopComponent } from './scrolltop/scrolltop.component';
 import { MultiImageComponent } from './multi-image/multi-image.component';
-import { ImageDirective } from './multi-image/image.directive';
 
 
 
@@ -63,7 +62,6 @@ import { ImageDirective } from './multi-image/image.directive';
     HeroProfileComponent,
     AdBannerComponent,
     HighlightDirective,
-    ImageDirective,
     ScrolltopComponent,
     MultiImageComponent
   ],

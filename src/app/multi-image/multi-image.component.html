@@ -1,1 +1,5 @@
-<p [innerHTML]="input"></p>
+<img *ngFor="let str of values; index as i"  [src]="'./assets/images/'+ str" 
+    alt="Image Not found" [hidden]="i != index">
+<div class="container">
+<div *ngFor="let str of values; index as i" (mouseover)="index = i" [class]="i == index ? 'select' : 'circle'"></div>
+</div>
