@@ -39,6 +39,7 @@ import { AdBannerComponent } from "./dynamic-loader/ad-banner.component";
 import { HighlightDirective } from './highlight.directive';
 import { ScrolltopComponent } from './scrolltop/scrolltop.component';
 import { MultiImageComponent } from './multi-image/multi-image.component';
+import { SliderImageComponent } from './slider-image/slider-image.component';
 
 
 
@@ -63,7 +64,8 @@ import { MultiImageComponent } from './multi-image/multi-image.component';
     AdBannerComponent,
     HighlightDirective,
     ScrolltopComponent,
-    MultiImageComponent
+    MultiImageComponent,
+    SliderImageComponent
   ],
   imports: [
     BrowserModule,
