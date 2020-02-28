@@ -1,5 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
-import {faChevronUp} from '@fortawesome/free-solid-svg-icons'
+import {faChevronUp} from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'scroll-to-top',
   templateUrl: './scrolltop.component.html',

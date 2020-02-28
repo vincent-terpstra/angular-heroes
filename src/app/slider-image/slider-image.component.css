@@ -3,6 +3,8 @@ img {
     height: 400px;
 
     object-fit: none;
+
+    user-select:none;
 }
 
 img:hover, div:hover {
@@ -12,4 +14,28 @@ img:hover, div:hover {
 #slider {
     position: absolute;
     overflow: hidden;
+
+    user-select:none;
+}
+
+.divider {
+    width: 5px;
+    height: 400px;
+
+    background-color: white;
+    position: absolute;
+
+    z-index: 1;
+}
+
+fa-icon {
+    color: white;
+    position: absolute;
+
+    z-index: 1;
+}
+
+.chev {
+    position:relative;
+    top: 190px;
 }
