@@ -1,1 +1,4 @@
-<p>slider-image works!</p>
+<div id="slider" [style.width]="width + 'px'" (mousemove)="onMouseMove($event)">
+    <img src="./assets/images/IMAG0173.jpg" alt="Image not found" draggable=false>
+</div>
+<img src="./assets/images/IMAG0178.jpg" alt="Image not found" draggable=false (mousemove)="onMouseMove($event)">
