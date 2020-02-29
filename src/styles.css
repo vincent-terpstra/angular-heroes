@@ -42,7 +42,7 @@
     text-align:center;
   }
   
-  .hover:hover, button:hover {
+  .hover:hover, button:hover, a:hover {
     background-color: #cfd8dc !important;
     color: #607d8b !important;
     cursor: pointer;

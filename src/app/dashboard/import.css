@@ -21,3 +21,8 @@
     color: #607d8b;
   }
   
+  a {
+    text-decoration: none;
+
+    padding: 10px 0 10px 0;
+  }

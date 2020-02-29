@@ -1,9 +1,11 @@
+<div style="display:inline-block">
 <div class="divider" [style.left]="(width + offset - 2.5) + 'px'"></div>
 <div class="chev">
-<fa-icon [icon]=left [style.left]="(width + offset - 25) + 'px'"></fa-icon>
-<fa-icon [icon]=right [style.left]="(width + offset + 0) + 'px'"></fa-icon>
+<fa-icon [icon]=left [style.left]="(width - 20) + 'px'"></fa-icon>
+<fa-icon [icon]=right [style.left]="(width + 10) + 'px'"></fa-icon>
 </div>
 <div id="slider" [style.width]="width + 'px'" (mousemove)="onMouseMove($event)">
     <img src="./assets/images/IMAG0173.jpg" alt="Image not found" draggable=false>
 </div>
 <img src="./assets/images/IMAG0178.jpg" alt="Image not found" draggable=false (mousemove)="onMouseMove($event)">
+</div>
