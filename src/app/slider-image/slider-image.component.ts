@@ -7,6 +7,7 @@ import {faChevronRight} from '@fortawesome/free-solid-svg-icons';
   templateUrl: './slider-image.component.html',
   styleUrls: ['./slider-image.component.css']
 })
+
 export class SliderImageComponent implements OnInit {
   left = faChevronLeft;
   right = faChevronRight;
