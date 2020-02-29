@@ -1,25 +1,21 @@
 /* HeroesComponent's private CSS styles */
 .heroes {
   list-style-type: none;
+  margin:0;
   padding: 0;
-  width: 20em;
 }
 .heroes li {
+  position: relative;
   cursor: pointer;
   background-color: #EEE;
-  margin: .5em;
   height: 2em;
   border-radius: 4px;
+  margin: 2px;
 }
 
 .heroes li:hover {
-  position: relative;
-  cursor: pointer;
   color: #607d8b;
   background-color: #cfd8dc;
-}
-
-.shift {
   left: .2em;
 }
 
@@ -46,4 +42,10 @@
 #add:hover {
   background-color: rgb(175, 150, 9);
   color: white !important;
+}
+
+.delete {
+  position: absolute;
+  right: 10px;
+  top: 5px;
 }

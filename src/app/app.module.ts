@@ -40,6 +40,7 @@ import { HighlightDirective } from './highlight.directive';
 import { ScrolltopComponent } from './scrolltop/scrolltop.component';
 import { MultiImageComponent } from './multi-image/multi-image.component';
 import { SliderImageComponent } from './slider-image/slider-image.component';
+import { HeroFormComponent } from './hero-form/hero-form.component';
 
 
 
@@ -65,7 +66,8 @@ import { SliderImageComponent } from './slider-image/slider-image.component';
     HighlightDirective,
     ScrolltopComponent,
     MultiImageComponent,
-    SliderImageComponent
+    SliderImageComponent,
+    HeroFormComponent
   ],
   imports: [
     BrowserModule,

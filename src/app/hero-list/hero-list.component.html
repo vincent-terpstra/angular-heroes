@@ -1,20 +1,12 @@
 <h3>My Heroes</h3>
-<ul class="heroes">
-    <li>
-    <span class="badge"><label>Add Hero</label></span>
-        <input #heroName 
-            (keyup.enter)="add(heroName.value); heroName.value=''"
-            (blur)="add(heroName.value); heroName.value=''"/>
-    <button (click)="add(heroName.value); heroName.value=''" 
-        id= "add">
-        +
-    </button>
-    </li>
-    <br>
-    <li *ngFor="let hero of heroes; trackBy: getHeroId" class="shift">
+<div class="grid">
+<ul class="heroes medium-6 small-12">
+    <li *ngFor="let hero of heroes; trackBy: getHeroId">
         <a routerLink="/detail/{{hero.id}}">
             <span class="badge">{{hero.id}}</span> {{hero.name}}
         </a>
-        <app-delete-button (deleteRequest)="delete($event)" [hero]="hero" label="x"></app-delete-button>
+        <app-delete-button class="delete" (deleteRequest)="delete($event)" [hero]="hero" label="x"></app-delete-button>
     </li>    
 </ul>
+<app-hero-form class="medium-6 small-12"></app-hero-form>
+</div>
