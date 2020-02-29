@@ -1,7 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
-import { HeroDetailComponent } from '../hero-detail/hero-detail.component';
 
 import { faFilm } from '@fortawesome/free-solid-svg-icons';
 import { AdItem } from '../dynamic-loader/ad-item';
@@ -38,12 +37,12 @@ export class DashboardComponent implements OnInit {
   onSelect(hero:Hero): void {
     this.selected = hero;
   }
-
+/*
   @ViewChild(HeroDetailComponent, {static:false}) viewChild: HeroDetailComponent;
-
   ngAfterViewInit(){
     console.log("After View Created");
   }
+
   prevHero: string;
   ngAfterViewChecked(){
     if(this.viewChild == undefined) return;
@@ -56,4 +55,5 @@ export class DashboardComponent implements OnInit {
       
     }
   }
+  */
 }
