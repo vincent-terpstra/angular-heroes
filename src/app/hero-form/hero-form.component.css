@@ -77,9 +77,14 @@ select {
   }
 
   .alert {
-      color: red;
+      color: #a94442;
   }
 
   button {
       margin: 2px;
+  }
+
+  button:disabled{
+      text-decoration: line-through;
+      background-color: #a94442;
   }

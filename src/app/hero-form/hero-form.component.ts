@@ -22,13 +22,10 @@ export class HeroFormComponent implements OnInit {
 
   onSubmit(){
     this.submitted = true;
-  }
-
-  get diagnostic() {
-    return JSON.stringify(this.model);
+    this.newHero();
   }
 
   newHero(){
-    this.model = new Hero(42, '', '');
+    this.model = new Hero(42, '', this.powers[0]);
   }
 }
